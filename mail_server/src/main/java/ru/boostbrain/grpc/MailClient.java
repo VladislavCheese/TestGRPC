@@ -12,7 +12,7 @@ public class MailClient {
     public static void main(String[] args){
         //Создание клиентской заглушки
         ManagedChannel channel = ManagedChannelBuilder
-                .forAddress("localhost", 8080)
+                .forAddress("localhost", 8081)
                 .usePlaintext()
                 .build();
 
