@@ -18,11 +18,12 @@ public class MailServer extends MailServerGrpc.MailServerImplBase {
 
     public static void main(String[] args) throws IOException, InterruptedException {
         Server server = ServerBuilder
-                .forPort(8080)
+                .forPort(8081)
                 .addService(new MailServer())
                 .build();
 
         server.start();
+        System.out.println("Server started");
         server.awaitTermination();
     }
 
